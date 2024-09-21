@@ -1,0 +1,326 @@
+/* styles.css */
+
+/* 기본 스타일 초기화 */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 둥근모꼴;
+      line-height: 1.6;
+}
+
+/* 헤더 */
+header {
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      font-size: large;
+}
+
+header img.center-image {
+      max-width: 100%;
+      height: auto;
+}
+
+.center-image {
+      cursor: pointer;
+      /* Change cursor to pointer (finger shape) on hover */
+}
+
+/* 네비 */
+nav {
+      background-color: black;
+      color: white;
+      font-size: large;
+      padding: 10px;
+      text-align: center;
+}
+
+#main-title {
+      font-size: 2.5em;
+      /* Increase the font size */
+      margin: 10px 0;
+      /* Add some margin for spacing */
+}
+
+nav h2 {
+      margin-bottom: 10px;
+}
+
+.nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+nav .audio-player {
+      flex: none;
+      /* flex 속성을 none으로 설정하여 width 속성이 적용되도록 함 */
+      width: 300px;
+      /* 원하는 길이로 설정 */
+      margin-bottom: 10px;
+}
+
+nav .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+nav #searchBox {
+      width: 400px;
+      padding: 15px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      /* Add rounded corners */
+      font-size: 1em;
+      /* Set the font size */
+      font-family: 둥근모꼴;
+}
+
+nav #searchButton {
+      padding: 15px 30px;
+      /* 패딩을 늘려서 크기를 키움 */
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      font-size: 1em;
+      font-family: 둥근모꼴;
+}
+
+nav .search-container button:hover {
+      background-color: antiquewhite;
+}
+
+/* 섹션 */
+section {
+      display: flex;
+      padding: 20px;
+}
+
+section>div {
+      flex: 1;
+      padding: 10px;
+}
+
+section>div:first-child {
+      border-right: 1px solid #ddd;
+}
+
+/* footer */
+footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      margin-top: 20px;
+}
+
+/* 테이블 */
+table {
+
+      width: 80%;
+      max-width: 600px;
+      /* 최대 너비 설정 */
+      table-layout: fixed;
+      margin: auto;
+      /* Center the table */
+      font-size: large;
+      border-radius: 20px;
+      /* Add rounded corners */
+      overflow: hidden;
+      /* Ensure the rounded corners are visible */
+      border-collapse: separate;
+      /* Ensure borders do not collapse */
+      border-spacing: 0;
+      /* Remove spacing between cells */
+}
+
+th,
+td {
+      width: 50%;
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px;
+      border: none;
+      /* Remove borders from cells */
+}
+
+img {
+      display: block;
+      margin: 0 auto;
+}
+
+/* 테이블 셀 색 */
+.th-red {
+      /* background-color: #821405; */
+
+      background-color: lightcoral;
+      color: white;
+}
+
+.th-black {
+      /* background-color: black; */
+      background-color: whitesmoke;
+      color: black;
+}
+
+/* pokemon table pre & next button */
+#previous-pokemon,
+#next-pokemon {
+      padding: 10px 20px;
+      /* Increase padding for better appearance */
+      font-size: large;
+      /* Increase font size */
+      border: none;
+      border-radius: 5px;
+      background-color: lightcoral;
+      ;
+      /* Button background color */
+      color: white;
+      /* Button text color */
+      cursor: pointer;
+      margin: 10px;
+      /* Add margin for spacing */
+      font-family: 둥근모꼴;
+}
+
+#previous-pokemon {
+      float: left;
+      /* Align to the left */
+}
+
+#next-pokemon {
+      float: right;
+      /* Align to the right */
+}
+
+#previous-pokemon:hover,
+#next-pokemon:hover {
+      background-color: tomato;
+      /* Darker background on hover */
+}
+
+.scrollable {
+      max-height: 150px;
+      /* Adjust the height as needed */
+      overflow-y: auto;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+}
+
+
+/* h2 가운데 정렬 및 폰트 크기 조정 */
+.h2-centered-text {
+      text-align: center;
+      font-size: 2em;
+      /* 폰트 크기 조정 */
+}
+
+/* iframe-게임 플레이어 가운데 정렬 */
+.centered-iframe {
+      text-align: center;
+}
+
+.centered-iframe iframe {
+      display: block;
+      /* 블록 요소로 설정 */
+      margin: 0 auto;
+      /* 좌우 마진을 자동으로 설정하여 중앙 정렬 */
+}
+
+/* pokemon grid & cards */
+.pokemon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      overflow-y: scroll;
+      height: 80vh;
+}
+
+.pokemon-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      width: 150px;
+      transition: background-color 0.3s ease;
+      /* Smooth transition for background color */
+      border-radius: 20px;
+      /* Add rounded corners */
+}
+
+.pokemon-card:hover {
+      background-color: #f0f0f0;
+      /* Change background color on hover */
+}
+
+#pokemon-details {
+      display: none;
+      margin-bottom: 20px;
+}
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+}
+
+.close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+/* Auto complete */
+.ui-autocomplete {
+      max-height: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+
+}
+
+.ui-menu-item {
+      padding: 5px 10px;
+      cursor: pointer;
+      font-family: 둥근모꼴;
+
+}
+
+.ui-menu-item:hover {
+      background-color: #f0f0f0;
+}

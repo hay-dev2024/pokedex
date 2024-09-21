@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>POKEDEX</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <!-- JS -->
+      <script src="script.js"></script>
+      <!-- auto completion -->
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+      <header>
+            <img src="images/titlelogo.png" class="center-image" alt="Pokédex Logo" onclick="location.reload();">
+            <h1 id="main-title">Pokédex</h1>
+      </header>
+
+      <nav>
+            <br>
+            <h2 id="search-instruction">게임을 하며 궁금한 포켓몬을 검색하세요</h2>
+            <div class="nav-container">
+                  <audio controls class="audio-player" loop>
+                        <source src="audio/Circhester_short.mp3" type="audio/mpeg">
+                  </audio>
+                  <div class="search-container">
+                        <input type="text" id="searchBox" placeholder="포켓몬 검색하기">
+                        <button id="searchButton">검색</button>
+                  </div>
+            </div>
+      </nav>
+
+      <section style="display: flex;">
+            <div style="flex: 1; padding: 10px;">
+                  <!-- 포켓몬 게임 공간 -->
+                  <h2 class="h2-centered-text" id="game-title">포켓몬 게임</h2>
+                  <!-- 게임 관련 콘텐츠 추가 -->
+                  <br>
+                  <span style="text-align: center; display: block; font-size: large;" id="play-now-instruction">PLAY
+                        NOW 버튼 누르고 Pokémon Red 플레이하기<br>
+                        * controls: a, s, enter *
+                  </span><br>
+                  <div class="centered-iframe">
+                        <!-- <iframe src="https://www.retrogames.cc/embed/44577-pokemon-red-full-color-hack.html" width="700"
+                              height="550" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true"
+                              mozallowfullscreen="true" scrolling="no"></iframe> -->
+
+                        <!-- https://cdn.emulatorjs.org/ https://emulatorjs.org/ -->
+                        <iframe src="https://cdn.emulatorjs.org/stable/index.html" width="900" height="750"
+                              frameborder="no" allowfullscreen="true" webkitallowfullscreen="true"
+                              mozallowfullscreen="true" scrolling="no"></iframe>
+
+                  </div>
+                  <br><br>
+                  <h2 class="h2-centered-text" id="pokemon-red-title">Pokémon FireRed</h2>
+                  <br>
+                  <img src="images/fire red.webp" width="800">
+                  <br>
+                  <p style="text-align: center;" id="pokemon-red-description">
+                        포켓몬스터 레드·그린을 리메이크한 3세대 작품.<br>
+                        포켓몬스터 1세대 게임 중 포켓몬스터 레드·그린을 리메이크하여 닌텐도에서 내놓은 포켓몬스터 게임 3세대 소프트로, 포켓몬 시리즈 사상 최초의 리메이크 작품이다.
+                        <br>
+                        출시일: 2004년 2월 10일
+                  </p>
+            </div>
+
+            <div style="flex: 1; padding: 10px;">
+                  <!-- 포켓몬 정보 공간 -->
+                  <h2 class="h2-centered-text" id="pokemonInfoTitle">포켓몬 정보</h2>
+                  <!-- 설명 관련 콘텐츠 추가 -->
+
+                  <div id="pokemon-details">
+                        <!-- Pokémon details table will be dynamically added here -->
+                  </div>
+                  <section id="pokemon-grid" class="pokemon-grid">
+                        <!-- Pokémon boxes will be dynamically added here -->
+                  </section>
+
+
+            </div>
+
+            </div>
+      </section>
+
+      <footer>
+            <br>
+            <h3>©2024 Pokémon. ©1995-2024 Nintendo/Creatures Inc./GAME FREAK inc.</h3>
+      </footer>
+</body>
+
+</html>
