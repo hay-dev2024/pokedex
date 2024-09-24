@@ -311,14 +311,12 @@ img {
       background-color: white;
       border: 1px solid #ccc;
       border-radius: 3px;
-
 }
 
 .ui-menu-item {
       padding: 5px 10px;
       cursor: pointer;
       font-family: 둥근모꼴;
-
 }
 
 .ui-menu-item:hover {

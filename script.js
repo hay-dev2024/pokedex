@@ -9,7 +9,6 @@ $(document).ready(function () {
         });
     }
 
-    // *****CLAUDE*****
     let pokemonData = [];
     let allPokemonNames = [];
 
@@ -43,13 +42,12 @@ $(document).ready(function () {
                         return matcher.test(item);
                     });
                 } else {
-                    // For non-Korean (assuming English), keep the existing behavior
+                    // For English, keep the existing behavior
                     var matcher = new RegExp($.ui.autocomplete.escapeRegex(term), "i");
                     results = $.grep(allPokemonNames, function (item) {
                         return matcher.test(item);
                     });
                 }
-
                 response(results);
             },
             minLength: 1,  // Changed to 1 to show suggestions after the first character
@@ -105,7 +103,6 @@ $(document).ready(function () {
             pokemonGrid.append(pokemonHtml);
         });
     }
-    // *****CLAUDE*****
 
     // Function to fetch Pokémon data by name
     function fetchPokemonDataByName(pokemonName) {
@@ -158,7 +155,6 @@ $(document).ready(function () {
         }, handleError);
     }
 
-    // *****CLAUDE*****
     let koreanToEnglishMap = {};
 
     function buildKoreanNameMapping() {
@@ -205,9 +201,7 @@ $(document).ready(function () {
             });
         }, handleError);
     }
-    // *****CLAUDE*****
 
-    // *****CLAUDE*****
     // Function to fetch Pokémon species data
     function fetchPokemonSpeciesData(speciesUrl) {
         fetchPokemonData(speciesUrl, function (data) {
@@ -228,7 +222,6 @@ $(document).ready(function () {
             }
         }, handleError);
     }
-    // *****CLAUDE*****
 
     // Function to fetch Pokémon ability data
     function fetchPokemonAbilityData(abilityUrl, isHidden) {
@@ -265,10 +258,9 @@ $(document).ready(function () {
     // Function to handle errors
     function handleError(error) {
         console.error('Error fetching Pokémon data:', error);
-        alert('Pokémon not found. Please try again.');
+        alert('포켓몬을 찾지 못했습니다. 다시 검색하세요.');
     }
 
-    // *****CLAUDE***** + copilot and I!
     // Function to display Pokémon details in a table
     function displayPokemonDetails(data) {
         const pokemonCryUrl = `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${data.id}.ogg`;
@@ -355,7 +347,7 @@ $(document).ready(function () {
         if (pokemonName) {
             fetchPokemonDataByName(pokemonName);
         } else {
-            alert('Please enter a Pokémon name.');
+            alert('포켓몬의 이름을 입력하세요.');
         }
     });
 
